@@ -35,15 +35,21 @@ export default {
     'component-8' : () => import('@/components/Component-8.vue'),
     'component-9' : () => import('@/components/Component-9.vue'),
     'component-10' : () => import('@/components/Component-10.vue'),
-  }
+  },
+  mounted(){
+  },
 }
 </script>
 
 <style >
+::-webkit-scrollbar{
+  display:none;
+}
 body{
   margin:0;
   padding: 0;
   background : #000000 ;
+  
 }
 html{
     scroll-behavior: smooth;
@@ -52,4 +58,17 @@ html{
   /* border : 1px solid ; */
   height: 110vh;
 }
+</style>
+<style >
+.home {
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  /* scroll-snap-points-y: repeat(100vh); */
+  scroll-snap-type: y mandatory;
+}
+.frame-container {
+  scroll-snap-align: start;
+}
+
 </style>

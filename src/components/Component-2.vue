@@ -62,6 +62,7 @@ export default {
 .comp-2 > .text{
     color:white;
     opacity:0%;
+    padding-top:5%;
     /* transition: opacity ;
     transition-duration: 2s; */
 
@@ -72,7 +73,7 @@ export default {
     animation: text_animation ;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-}
+ }
 @keyframes text_animation {
     
     from {

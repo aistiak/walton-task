@@ -83,7 +83,7 @@ export default {
 </script>
 <style scoped>
 .comp-1{
-    height: 100vh;
+    height: 110vh;
     /* background: rgb(75, 73, 73); */
     background: #000000;
     opacity: 100% ;
