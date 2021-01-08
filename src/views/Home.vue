@@ -7,10 +7,10 @@
     <component-3 />
     <component-4 />
     <component-5 />
-    <component-6 />
-    <component-7 />
     <component-8 />
     <component-9 />
+    <component-6 />
+    <component-7 />
     <component-10 />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>

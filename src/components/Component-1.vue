@@ -8,7 +8,7 @@
                 fugiat dolorem autem sunt labore quisquam quam similique magnam?
             </p>
         </div>
-        <img  :src="im_path" style="width:62vw;position:relative;top:5%;"/>
+        <img  :src="im_path" style="height:70%;position:relative;top:5%;"/>
 
     </div>
 </template>
@@ -41,7 +41,7 @@ export default {
     methods : {
         startAnimation(){
             console.log(this.cur)
-            this.interval_ref = setInterval(this.changeFrame,30)
+            this.interval_ref = setInterval(this.changeFrame,40)
         },
         changeFrame(){
             this.cur = ( this.cur * 1 + 1 ) + ''
@@ -68,7 +68,7 @@ export default {
                         // this.startAnimation()
                     }else{
                         entry.target.classList.add('comp-1-exit')
-                        clearInterval(this.interval_ref)
+                        // clearInterval(this.interval_ref)
                         // this.cur = '3'
                     }
                 }.bind(this))
