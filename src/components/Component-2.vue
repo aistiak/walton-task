@@ -1,79 +1,89 @@
 <template>
     <div class="frame-container comp-2">
-        
-        <img  :src="im_path" style="width:90vw"/>
+        <div class="text ">
+            <h1>Durable 180 Hinge </h1>
+            <p>
+                With its 180 hinge the EX30 Pro can be laid falt on the table to share content with friends and colleauges . its<br>
+                unique , durable hinge design has benn subjects to a gruelling 20,000 cycle in open-and-close tests .
+            </p>
+        </div>
 
     </div>
 </template>
 <script>
 export default {
-    
-    data() {
-
+    data(){
         return {
-            img_path : '../assets/compressed/Compressed-1/Sc_One_00003.png',
-            cur : '3' ,
-            interval_ref : `` ,
-        }
-    },
-    computed : {
-        im_path (){
-            return this.getImgUrl(this.cur)
-        },  
-    },
-    mounted () {
-        // this.setObserver();
-        this.startAnimation()
-    },
-    watch : {
-        cur (val){
-            val >= 197 ? clearInterval(this.interval_ref) : `` 
-        }
-    },
-    methods : {
-        startAnimation(){
-            console.log(this.cur)
-            this.interval_ref = setInterval(this.changeFrame,50)
-        },
-        changeFrame(){
-            this.cur = ( this.cur * 1 + 1 ) + ''
-            console.log(this.cur)
-        },
 
-        getImgUrl(pic) {
-            let t = `${pic.padStart(5,'0')}.png`
-            return require('../assets/compressed/Compressed-1/Sc_One_'+t)
-        },
+        }
+    },
+
+    mounted() {
+        this.setObserver()
+    },
+
+    methods : {
 
         setObserver(){
-            let options = {
+             let options = {
                 root : null , //document.querySelector('comp-3'),
                 rootMargin: '0px' ,
-                threshold : 0.7 ,
+                threshold : .2,
             }
             let observer = new IntersectionObserver(function(entries,observer){
                 
                 entries.forEach(function(entry) {
                      
                     if(entry.isIntersecting){
+                        // entry.target.classList.add('text-animate')
                         // this.startAnimation()
+                        document.querySelector('.comp-2 > .text').classList.add('text-animate')
                     }else{
-                        
-                        clearInterval(this.interval_ref)
+                        // entry.target.classList.remove('text-animate')
                         // this.cur = '3'
+                        document.querySelector('.comp-2 > .text').classList.remove('text-animate')
                     }
                 }.bind(this))
             }.bind(this), options);
 
             let target = document.querySelector('.comp-2')
-            observer.observe(target)
+            observer.observe(target)           
+        }
 
-        },
     },
+
+
+
+
 }
 </script>
 <style scoped>
-.comp-2{
-    background: rgb(75, 73, 73);
+
+.comp-2 > .text{
+    color:white;
+    opacity:0%;
+    /* transition: opacity ;
+    transition-duration: 2s; */
+
 }
+ .text-animate {
+    
+    /* opacity : 100%; */
+    animation: text_animation ;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes text_animation {
+    
+    from {
+        opacity:20%;
+        transform: translateY(200px);
+    }
+
+    to {
+        opacity:100%;
+        transform: translateY(0px);
+    }
+}
+
 </style>

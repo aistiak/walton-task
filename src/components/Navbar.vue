@@ -34,10 +34,12 @@
 <style scoped>
 .nav-bar{
     position: fixed;
+    top:1px;
     width: 100vw;
     height: 65px;
     background: white;
     font-family: sans-serif;
+    z-index: 100;
 }
 .nav-bar > .top {
     background: #000000;
