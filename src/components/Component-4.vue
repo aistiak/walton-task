@@ -1,5 +1,5 @@
 <template>
-    <div class="frame-container comp-4">
+    <div class="frame-container comp-4 ">
         <div class="text">
             <h1>Processor</h1>
             <p>
@@ -9,18 +9,135 @@
                 Aspernatur vel distinctio aut in inventore?
             </p>
         </div>
-        <!-- <div> -->
-            <img src="../assets/compressed/Compressed-3/Sc_Three_00032.png" >
-        <!-- </div> -->
+        <div class="img">
+            <!-- <img src="../assets/compressed/Compressed-3/Sc_Three_00032.png" > -->
+        </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return {
+            cur : 0 ,
+            timeout_ref : `` ,
+            img_els : [] ,
+        }
+    },
+    mounted () {
+        this.setObserver()
+        this.populateImage()
+    },
+    methods : {
+        preloadImg(url){
+            let img = new Image()
+            img.src = url 
+            img.style.height  = '70vh'
+            img.style.width   = 'auto'
+            // img.style.height  = '70vh'
+            return img 
+        },
+        getImgUrl(pic) {
+            let t = `${(pic+'').padStart(5,'0')}.png`
+            return require('../assets/compressed/Compressed-3/Sc_Three_'+t)
+        },
+        populateImage(){
+            this.img_els  = []
+            for(let i = 0 ; i <= 32 ; i++){
+                let url = this.getImgUrl(i)
+                this.img_els.push( this.preloadImg(url) )
+            }
+            document.querySelector('.comp-4 > .img').appendChild(this.img_els[0])    
+        },
+        updateImgaeEl(idx){
+            document.querySelector('.comp-4 > .img').innerHTML = ''
+            document.querySelector('.comp-4 > .img').appendChild(this.img_els[idx]) 
+            console.log(`updated image`)
+        },
+        setObserver(){
+            
+            let options ={
+                root : null ,
+                rootMargin : '0px' ,
+                threshold : 0.7 
+            }
 
-<style >
+            let observer = new IntersectionObserver(function(entries,observe){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        entry.target.classList.remove('comp-4-exit')
+                        document.querySelector('.comp-4 > .text').classList.add('text-animation')
+                        clearInterval(this.timeout_ref)    
+                        this.timeout_ref = setInterval(function(){
+                            if(this.cur < 32 ){
+                               this.cur +=1
+                               this.updateImgaeEl(this.cur)
+                            }else{
+                                clearInterval( this.timeout_ref )
+                            }
+                            console.log('intersecting comp 4 ')
+                        }.bind(this),50)
+                    }else{
+                        entry.target.classList.add('comp-4-exit')
+                        document.querySelector('.comp-4 > .text').classList.remove('text-animation')
+                        clearInterval(this.timeout_ref)    
+                        this.timeout_ref = setInterval(function(){
+                            if(this.cur > 1 ){
+                               this.cur -=1
+                               this.updateImgaeEl(this.cur)
+                            }else{
+                                clearInterval( this.timeout_ref )
+                            }
+                            console.log('intersecting comp 4 ')
+                        }.bind(this),50)
+
+                    }
+                }.bind(this));
+            }.bind(this),options)
+
+            let target = document.querySelector('.comp-4')
+            observer.observe(target)
+        }
+    },
+
+}
+</script>
+<style scoped>
+.comp-4 {
+    background: black;
+    opacity: 100%;
+    transition: opacity ;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.comp-4-exit {
+    opacity: 20%;
+    transition: opacity ;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
 .comp-4 > .text {
     padding-top:5%;
     color: white;
+    opacity: 20%;
+    scale: .3;
+
 }
-img {
-    height: 50vh;
+
+
+.text-animation{
+    animation: text_animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes text_animation {
+    from {
+        opacity: 20%;
+        transform: scale(.3);
+    }    
+    to {
+        opacity: 100%;
+        transform: scale(1);
+
+    }
 }
 </style>

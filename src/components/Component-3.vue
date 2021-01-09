@@ -1,7 +1,10 @@
 <template>
     <div class="frame-container comp-3">
         <div class="img">
-            <img src="../assets/compressed/Compressed-2/Sc_Two_00000.png" style="z-index:50;height:50vh;width:50vw;"/>
+            <!-- <div v-for="(v,k) in img_list" :key="k">
+               <img v-show=" k == cur " :src="v" style="z-index:50;height:65vh;width:auto"/>
+            </div> -->
+
         </div>
         <!-- <img src="http://source.unsplash.com/random/400x200" /> -->
         <div class="text" style="z-index:30;">
@@ -20,33 +23,89 @@
 export default {
     data(){
         return {
-
+            cur : 0  , // 21 max 
+            img_list : [] ,
+            img_els : [] ,
+            timeout_ref : `` ,
+            timeout_ref_2 : `` ,
         }
     },
-
+    watch : {
+        // cur(val){ 
+        //     document.querySelector('.comp-3 > .img').innerHTML = ''
+        //     document.querySelector('.comp-3 > .img').appendChild(this.img_els[0]) 
+        // }
+    },  
     mounted () {
+        
         this.setObserver() 
+        this.populateImage()
     },
 
     methods : {
+        preloadImg(url){
+            let img = new Image()
+            img.src = url 
+            img.style.height  = '70vh'
+            img.style.width   = 'auto'
+            // img.style.height  = '70vh'
+            return img 
+        },
+        getImgUrl(pic) {
+            let t = `${(pic+'').padStart(5,'0')}.png`
+            return require('../assets/compressed/Compressed-2/Sc_Two_'+t)
+        },
+        populateImage(){
+            this.img_els  = []
+            for(let i = 0 ; i <= 21 ; i++){
+                let url = this.getImgUrl(i)
+                this.img_els.push( this.preloadImg(url) )
+            }
+            document.querySelector('.comp-3 > .img').appendChild(this.img_els[0])    
+        },
+        updateImgaeEl(idx){
+            document.querySelector('.comp-3 > .img').innerHTML = ''
+            document.querySelector('.comp-3 > .img').appendChild(this.img_els[idx]) 
+            console.log(`updated image`)
+        },
         setObserver(){
              let options = {
                 root : null , //document.querySelector('comp-3'),
                 rootMargin: '0px' ,
-                threshold : .2,
+                threshold : .8,
             }
             let observer = new IntersectionObserver(function(entries,observer){
                 
                 entries.forEach(function(entry) {
                      
                     if(entry.isIntersecting){
-                        // entry.target.classList.add('text-animate')
-                        // this.startAnimation()
+                        entry.target.classList.remove('comp-3-exit')
                         document.querySelector('.comp-3 > .text').classList.add('text-animate')
+                        clearInterval(this.timeout_ref)    
+                        this.timeout_ref = setInterval(function(){
+                            if(this.cur <21 ){
+                               this.cur +=1
+                               this.updateImgaeEl(this.cur)
+                            }else{
+                                clearInterval( this.timeout_ref )
+                            }
+                            console.log('intersecting comp3 ')
+                        }.bind(this),50)
+                        
+
                     }else{
-                        // entry.target.classList.remove('text-animate')
-                        // this.cur = '3'
-                        document.querySelector('.comp-3 > .text').classList.remove('text-animate')
+                        entry.target.classList.add('comp-3-exit')
+                        clearInterval(this.timeout_ref)    
+                        this.timeout_ref = setInterval(function(){
+                            if(this.cur > 1 ){
+                               this.cur -=1
+                               this.updateImgaeEl(this.cur)
+                            }else{
+                                clearInterval( this.timeout_ref )
+                            }
+                            console.log('not intersecting comp3 ')
+                        }.bind(this),50)
+
                     }
                 }.bind(this))
             }.bind(this), options);
@@ -61,9 +120,32 @@ export default {
 
 
 <style scoped>
+.comp-3 {
+    height :110vh;
+    background: #000000;
+    opacity: 100% ;
+    transition: opacity scale;
+    transition : opacity tranform;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.comp-3-exit {
+    opacity: 20% ;
+    /* transform: scale(0.5); */
+    transition : opacity transform;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+}
 .comp-3 > .text {
     position: relative;
     color : white ;
+    opacity: 0%;
+    transition: opacity transform;
+    transition-duration: 3s;
+    transition-delay: 2s;
+    transition-timing-function: linear;
+    top:-7%;
 }
 .comp-3 > .img {
     position: relative;
@@ -71,11 +153,16 @@ export default {
     padding-top:5%;
 
 }
+img {
+    height: 70vh;
+    width: auto;
+}
 .text-animate {
     
     /* opacity : 100%; */
     animation: text_animation ;
-    animation-duration: 4s;
+    animation-duration: 3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
  }
 @keyframes text_animation {
