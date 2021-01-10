@@ -34,8 +34,8 @@ export default {
         preloadImg(url){
             let img = new Image()
             img.src = url 
-            img.style.height  = '85vh'
-            img.style.width   = 'auto'
+            // img.style.height  = '85vh'
+            // img.style.width   = 'auto'
             // img.style.height  = '70vh'
             return img 
         },
@@ -152,6 +152,32 @@ export default {
     to {
         opacity: 100%;
         transform: rotateY(0deg);
+
+    }
+}
+</style>
+<style >
+.comp-5 > .img > img {
+    height : 85vh;
+}
+@media only screen and (max-width: 1040px) {
+    .comp-5 > .img > img {
+        height: 50vh;
+        margin-top: 25%;
+        position: relative;
+        /* left: -10%; */
+
+    }
+}
+@media only screen and (max-width: 500px) {
+    .comp-5 > .img > img { 
+        height: 31vh;
+    }
+
+    .comp-5 > .img  {
+        top: 5%;
+        right: 3%;
+        /* left: -10%; */
 
     }
 }

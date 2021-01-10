@@ -1,5 +1,5 @@
 <template>
-    <div class="frame-container comp-10">
+    <div class=" comp-10">
         <div class="comp-10-container">
             <div class="walton-logo">
 
@@ -51,14 +51,20 @@
                 <div>KARONDA</div>
             </div>
             <div class="social">
-
+                <div class="logos">
+                    <i class="fa fa-car"></i>
+                </div>
+                <div class="some-text">
+                    this is dummy placeholder text 
+                </div>
             </div>
         </div>
     </div>
 </template>
 <style scoped>
 .comp-10{
-    height: 100vh;
+    /* height: 100vh; */
+    scroll-snap-align: start;
     /* min-height:600px; */
 }
 .comp-10-container {
@@ -71,25 +77,27 @@
 }
 .comp-10-container > div:nth-child(1){
     background: #606060;
-    height: 20%;
+    height: 20vh;
 }
 .comp-10-container > div:nth-child(2){
     background: #565656;
     height: 40%;
 }
 .comp-10-container > div:nth-child(3){
-    background: #1F1F1F;
-    height: 10%;
+
+
 }
 .comp-10-container > div:nth-child(4){
     background: #1F1F1F;
-    height: 30%;
+    height: 20vh;
 }
 .frame-container{
     scroll-snap-align: end;
 }
 
 .other-brands{
+    background: #1F1F1F;
+    /* height: 10%; */
     display: flex;
     flex-direction: row;
 }
@@ -102,6 +110,7 @@
 }
 .about-info {
     display: flex;
+    flex-wrap: wrap;
     color : whitesmoke;
     /* border:1px solid ; */
     padding-left: 20%;
@@ -118,5 +127,10 @@
 }
 .about-info > .items > div:nth-child(1){
     color:white ;
+}
+@media only screen and (max-width: 550px) {
+    .other-brands {
+        flex-wrap: wrap;
+    }
 }
 </style>

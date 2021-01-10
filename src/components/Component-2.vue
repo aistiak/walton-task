@@ -7,6 +7,9 @@
                 unique , durable hinge design has benn subjects to a gruelling 20,000 cycle in open-and-close tests .
             </p>
         </div>
+        <div class="img">
+            <img src="~@/assets/others/laptop-180.png" alt="">
+        </div>
 
     </div>
 </template>
@@ -58,14 +61,28 @@ export default {
 }
 </script>
 <style scoped>
-
+.comp-2 {
+    /* background-image: url('~@/assets/others/laptop-180.png'); */
+}
 .comp-2 > .text{
-    color:white;
-    opacity:0%;
-    padding-top:5%;
-    /* transition: opacity ;
-    transition-duration: 2s; */
+    color: white;
+    opacity: 0%;
+    padding-top: 5%;
+    z-index: 50;
+    position: relative;
 
+}
+.comp-2 > .img {
+    position: relative;
+    top: 2%;
+    z-index: 30;
+}
+.comp-2 > .img > img {
+    width: 66vw;
+    /* border: 1px solid green; */
+    height: auto;
+    position: relative;
+    bottom: 0%;
 }
  .text-animate {
     

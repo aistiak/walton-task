@@ -3,15 +3,15 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <nav-bar/>
     <component-1 />
-    <component-8 />
     <component-2 />
     <component-3 />
     <component-4 />
     <component-5 />
+    <component-8 />
     <component-9 />
-    <component-6 />
-    <component-7 />
     <component-10 />
+    <!-- <component-6 /> -->
+    <!-- <component-7 /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>

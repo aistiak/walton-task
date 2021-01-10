@@ -35,8 +35,8 @@ export default {
         preloadImg(url){
             let img = new Image()
             img.src = url 
-            img.style.height  = '70vh'
-            img.style.width   = 'auto'
+            // img.style.height  = '70vh'
+            // img.style.width   = 'auto'
             // img.style.height  = '70vh'
             return img 
         },
@@ -116,13 +116,13 @@ export default {
 .comp-8 {
     background: black;
     opacity: 100%;
-    transition: opacity ;
+    transition-property: opacity ;
     transition-duration: 2s;
     transition-timing-function: linear;
 }
 .comp-8-exit {
     opacity: 20%;
-    transition: opacity ;
+    transition-property: opacity ;
     transition-duration: 2s;
     transition-timing-function: linear;
 }
@@ -131,12 +131,18 @@ export default {
     color: white;
     /* opacity: 20%; */
     scale: .3;
-
-
+}
+.comp-8 > .text > h1 , .comp-8 > .text > p  {
+    /* transition-property: opacity transform;
+    opacity: 0%; */
 }
 
 .comp-8 > .img {
    
+}
+.comp-8 > .text > * {
+    opacity: 0%;
+
 }
 .text-animation-left{
     animation: text_animation_left;
@@ -169,6 +175,32 @@ export default {
         opacity: 100%;
         transform: translateX(0px);
 
+    }
+}
+</style>
+<style >
+.comp-8 > .img > img {
+    height : 70vh;
+}
+@media only screen and (max-width: 1040px) {
+    .comp-8 > .img > img {
+        height: 50vh;
+        margin-top: 25%;
+        position: relative;
+        /* left: -10%; */
+
+    }
+}
+@media only screen and (max-width: 500px) {
+    .comp-8 > .img > img {
+        height: 30vh;
+        margin-top: 25%;
+        position: relative;
+        /* left: -10%; */
+
+    }
+    .comp-8 > .text {
+     padding-top:20%;
     }
 }
 </style>

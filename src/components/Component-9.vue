@@ -7,7 +7,10 @@
                  modi expedita assumenda ut amet similique iste, enim quisquam reiciendis reprehenderit no <br>
                  strum nemo fugiat porro debitis? Nisi, quod! <br>
             </p>
-        </div>        
+        </div>     
+        <div class="img">
+            <img src="~@/assets/others/laptop-hand.png" alt="">
+        </div>   
     </div>
 </template>
 
@@ -15,5 +18,9 @@
     .comp-9 > .text {
         padding-top: 8%;
         color: white;
+    }
+    .comp-9 > .img > img{
+        width : 50vw ;
+        height: auto;
     }
 </style>
