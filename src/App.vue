@@ -11,7 +11,7 @@
 <script>
 import Home from "./views/Home"
 export default {
-  components :[Home] ,
+  // components :[Home] ,
   data(){
     return {
 

@@ -1,6 +1,7 @@
 <template>
     <div class="frame-container comp-1">
-        <div class="text" style="">
+        <my-loader v-show="loading" class="my-loader"/>
+        <div class="text" style="" v-show="!loading">
             <h1>Explore The World </h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nemo <br> 
@@ -8,7 +9,7 @@
                 fugiat dolorem autem sunt labore quisquam quam similique magnam?
             </p>
         </div>
-        <div class="img">
+        <div class="img" v-show="!loading">
 
         </div>
         <!-- <img  :src="im_path" style="height:70%;position:relative;top:5%;"/> -->
@@ -17,7 +18,9 @@
 </template>
 <script>
 export default {
-    
+    components:{
+        'my-loader'   : () => import('@/components/MyLoader.vue')
+    },
     data() {
 
         return {
@@ -25,6 +28,7 @@ export default {
             cur : 3 ,
             interval_ref : `` ,
             img_els : [] ,
+            loading : true , 
         }
     },
     computed : {
@@ -61,7 +65,8 @@ export default {
                 let url = this.getImgUrl(i)
                 this.img_els.push( this.preloadImg(url) )
             }
-            document.querySelector('.comp-1 > .img').appendChild(this.img_els[0])    
+            document.querySelector('.comp-1 > .img').appendChild(this.img_els[0])  
+            this.loading = false   
         },
         startAnimation(){
             // console.log(this.cur)

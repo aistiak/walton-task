@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <nav-bar/>
     <component-1 />
+    <!-- <my-loader/> -->
     <component-2 />
     <component-3 />
     <component-4 />
@@ -25,8 +26,8 @@ export default {
   name: 'Home',
   components: {
     HelloWorld  ,
-    'nav-bar' : () => import('@/components/Navbar.vue'),
-    Component1,
+    'nav-bar'     : () => import('@/components/Navbar.vue'),
+    'my-loader'   : () => import('@/components/MyLoader.vue') ,
     'component-1' : () => import('@/components/Component-1.vue'),
     'component-2' : () => import('@/components/Component-2.vue'),
     'component-3' : () => import('@/components/Component-3.vue'),
