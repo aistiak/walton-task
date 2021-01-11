@@ -159,6 +159,7 @@ export default {
 <style >
 .comp-1 > .img > img {
     height : 90vh;
+    filter: brightness(1.2)
 }
 @media only screen and (max-width: 1040px) {
     .comp-1 > .img > img {
