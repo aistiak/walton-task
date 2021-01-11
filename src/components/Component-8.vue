@@ -66,15 +66,19 @@ export default {
             let options ={
                 root : null ,
                 rootMargin : '0px' ,
-                threshold : 0.9 
+                threshold : .6
             }
 
             let observer = new IntersectionObserver(function(entries,observe){
                 entries.forEach(function(entry){
                     if(entry.isIntersecting){
                         entry.target.classList.remove('comp-8-exit')
-                        document.querySelector('.comp-8 > .text > h1').classList.add('text-animation-left')
-                        document.querySelector('.comp-8 > .text > p').classList.add('text-animation-right')
+                        document.querySelector('.comp-8 > .text > h1').classList.remove('text-left-ini')
+                        document.querySelector('.comp-8 > .text > h1').classList.add('text-left-entry')
+                        document.querySelector('.comp-8 > .text > p').classList.remove('text-right-ini')
+                        document.querySelector('.comp-8 > .text > p').classList.add('text-right-entry')
+                        // document.querySelector('.comp-8 > .text > h1').classList.add('text-animation-left')
+                        // document.querySelector('.comp-8 > .text > p').classList.add('text-animation-right')
                         clearInterval(this.timeout_ref)    
                         this.timeout_ref = setInterval(function(){
                             if(this.cur < 27 ){
@@ -87,8 +91,10 @@ export default {
                         }.bind(this),70)
                     }else{
                         entry.target.classList.add('comp-8-exit')
-                        document.querySelector('.comp-8 > .text > h1').classList.remove('text-animation-left')
-                        document.querySelector('.comp-8 > .text > p').classList.remove('text-animation-right')
+                        document.querySelector('.comp-8 > .text > h1').classList.add('text-left-ini')
+                        document.querySelector('.comp-8 > .text > h1').classList.remove('text-left-entry')
+                        document.querySelector('.comp-8 > .text > p').classList.add('text-right-ini')
+                        document.querySelector('.comp-8 > .text > p').classList.remove('text-right-entry')
                         clearInterval(this.timeout_ref)    
                         this.timeout_ref = setInterval(function(){
                             if(this.cur > 1 ){
@@ -133,17 +139,35 @@ export default {
     scale: .3;
 }
 .comp-8 > .text > h1 , .comp-8 > .text > p  {
-    /* transition-property: opacity transform;
-    opacity: 0%; */
+    transition-property: opacity transform;
+    transition-duration: 2s;
+    /* opacity: 0%; */
 }
 
+.text-left-ini {
+    
+    transform: translateX(-500px);
+    opacity: 10%;
+}
+.text-left-entry {
+     transform: translateX(0px);
+     opacity: 100%;
+}
+.text-right-ini {
+    transform: translateX(500px);
+    opacity: 10%;
+}
+.text-right-entry {
+     transform: translateX(0px);
+     opacity: 100%;
+}
 .comp-8 > .img {
    
 }
-.comp-8 > .text > * {
+/* .comp-8 > .text > * {
     opacity: 0%;
 
-}
+} */
 .text-animation-left{
     animation: text_animation_left;
     animation-duration: 3s;
@@ -157,7 +181,7 @@ export default {
 }
 @keyframes text_animation_left {
     from {
-        opacity: 0%;
+        opacity: 10%;
         transform: translateX(-500px);
     }    
     to {
