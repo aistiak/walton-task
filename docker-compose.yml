@@ -10,7 +10,7 @@ services:
             context: .
             dockerfile : Dockerfile
         ports:
-            - "8080:8085"        
+            - "8085:8080"        
         volumes:
             - .:/app
         networks:
