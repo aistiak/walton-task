@@ -54,7 +54,7 @@ body{
   background : #000000 ;
   
 }
-html{
+html,body{
     scroll-behavior: smooth;
 }
 .frame-container {
@@ -66,12 +66,12 @@ html{
 .home {
   overflow-y: scroll;
   height: 100vh;
-  scroll-snap-type: mandatory;
   /* scroll-snap-points-y: repeat(100vh); */
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory; */
 }
 .frame-container {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 .text > p {
     color : #7F7F7F ;

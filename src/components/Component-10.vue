@@ -68,10 +68,71 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return {
+
+
+
+        }
+    },
+    mounted(){
+
+        this.setObserver()
+    },
+
+    methods : {
+
+        setObserver(){
+            
+            let options ={
+                root : null ,
+                rootMargin : '0px' ,
+                threshold : 0.8
+            }
+
+            let observer = new IntersectionObserver(function(entries,observe){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        console.log(entry)
+                        entry.target.classList.add('comp-10-enter')
+                        entry.target.classList.remove('comp-10-exit')
+                    }else{
+                        entry.target.classList.remove('comp-10-enter')
+                        entry.target.classList.add('comp-10-exit')
+                    }
+                }.bind(this));
+            }.bind(this),options)
+
+            let target = document.querySelector('.comp-10')
+            observer.observe(target)
+        }
+    },
+
+
+}
+</script>
+<style scoped>
+.comp-10 {
+    transition-property: transform opacity ;
+    transition-duration: 1s;
+}
+.comp-10-enter {
+    opacity: 100%;
+    transform: scale(1);
+}
+.comp-10-exit {
+    opacity: 80%;
+    transform: scale(.95);
+
+}
+</style>
 <style scoped>
 .comp-10{
     /* height: 100vh; */
     scroll-snap-align: start;
+
     /* min-height:600px; */
 }
 .comp-10-container {
