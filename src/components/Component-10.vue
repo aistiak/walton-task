@@ -55,7 +55,10 @@
             </div>
             <div class="social">
                 <div class="logos">
-                    <i class="fa fa-car"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
                 </div>
                 <div class="some-text">
                     this is dummy placeholder text 
@@ -142,5 +145,12 @@
     margin-top: 1%;
     padding-left: 20%;
     padding-right: 20%;
+}
+.logos{
+    margin-top: 20px;
+}
+.logos > i {
+    font-size: 25px;
+    padding: 10px;
 }
 </style>
