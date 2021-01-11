@@ -5,9 +5,20 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <router-view/>
+    <!-- <Home/> -->
   </div>
 </template>
+<script>
+import Home from "./views/Home"
+export default {
+  components :[Home] ,
+  data(){
+    return {
 
+    }
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

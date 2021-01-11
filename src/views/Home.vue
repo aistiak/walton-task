@@ -19,12 +19,14 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import Component1 from '../components/Component-1'
 // import Component_1 from '@/components/Component-1.vue'
 export default {
   name: 'Home',
   components: {
     HelloWorld  ,
     'nav-bar' : () => import('@/components/Navbar.vue'),
+    Component1,
     'component-1' : () => import('@/components/Component-1.vue'),
     'component-2' : () => import('@/components/Component-2.vue'),
     'component-3' : () => import('@/components/Component-3.vue'),

@@ -105,13 +105,13 @@ export default {
 .comp-4 {
     background: black;
     opacity: 100%;
-    transition: opacity ;
+    transition-property: opacity ;
     transition-duration: 2s;
     transition-timing-function: linear;
 }
 .comp-4-exit {
     opacity: 20%;
-    transition: opacity ;
+    transition-property: opacity ;
     transition-duration: 2s;
     transition-timing-function: linear;
 }

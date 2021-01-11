@@ -124,15 +124,14 @@ export default {
     height :110vh;
     background: #000000;
     opacity: 100% ;
-    transition: opacity scale;
-    transition : opacity tranform;
+    transition-property: opacity scale tranform;
     transition-duration: 1s;
     transition-timing-function: linear;
 }
 .comp-3-exit {
     opacity: 20% ;
     /* transform: scale(0.5); */
-    transition : opacity transform;
+    transition-property : opacity transform;
     transition-duration: 1s;
     transition-timing-function: linear;
 
@@ -141,7 +140,7 @@ export default {
     position: relative;
     color : white ;
     opacity: 0%;
-    transition: opacity transform;
+    transition-property: opacity transform;
     transition-duration: 3s;
     transition-delay: 2s;
     transition-timing-function: linear;

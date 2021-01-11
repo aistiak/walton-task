@@ -123,14 +123,14 @@ export default {
     background: #000000;
     opacity: 100% ;
     /* transform: scale(1); */
-    transition : opacity tranform;
+    transition-property : opacity tranform;
     transition-duration: 1s;
     transition-timing-function: linear;
 }
 .comp-1-exit {
     opacity: 5% ;
     /* transform: scale(0.5); */
-    transition : opacity transform;
+    transition-property : opacity transform;
     transition-duration: 1s;
     transition-timing-function: linear;
 
