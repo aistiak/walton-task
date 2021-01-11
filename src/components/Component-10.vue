@@ -61,7 +61,8 @@
                     <i class="fab fa-instagram"></i>
                 </div>
                 <div class="some-text">
-                    this is dummy placeholder text 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatum qui
+                     <br> ratione provident, iusto odio nesciunt optio <br>
                 </div>
             </div>
         </div>
@@ -79,7 +80,7 @@
     height: inherit;
     display: flex ;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 .comp-10-container > div:nth-child(1){
     background: #606060;
@@ -141,7 +142,7 @@
 }
 
 .walton-logo > div >img {
-    background: #222;
+    background: #565656;
     margin-top: 1%;
     padding-left: 20%;
     padding-right: 20%;
@@ -152,5 +153,10 @@
 .logos > i {
     font-size: 25px;
     padding: 10px;
+    color: white;
+}
+.some-text{
+    color : #7F7F7F ;
+    font-weight:bold;
 }
 </style>

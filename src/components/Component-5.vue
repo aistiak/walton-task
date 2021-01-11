@@ -65,7 +65,7 @@ export default {
             let options ={
                 root : null ,
                 rootMargin : '0px' ,
-                threshold : 0.7 
+                threshold : 0.8 
             }
 
             let observer = new IntersectionObserver(function(entries,observe){
@@ -133,7 +133,10 @@ export default {
     left: -4%;
 
 }
-
+.text > p {
+    color: #7F7F7F;
+    font-weight: bold;
+}
 .comp-5 > .img {
     position: relative;
     top: -27%;
@@ -141,7 +144,7 @@ export default {
 }
 .text-animation{
     animation: text_animation;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 @keyframes text_animation {

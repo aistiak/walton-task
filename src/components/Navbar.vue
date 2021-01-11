@@ -4,9 +4,9 @@
             <div class="top">
                 <div class="content">
                     <!-- <div>Logo</div> -->
-                    <div>
-                        <img class="top-walton-logo" src="../assets/others/walton-logo-1.png" alt="">
-                    </div>
+                        <div>
+                            <img class="top-walton-logo" src="../assets/others/walton-logo-1.png" alt="">
+                        </div>
                     <div>Laptop</div>
                     <div>Desktop</div>
                     <div>All In One</div>
@@ -52,7 +52,7 @@
             <div class="nav-dropdown">
                 <div class="first">
                    <!-- <div>Logo</div> -->
-                    <img class="mobi-tamarind-logo" src="../assets/others/tamarind.png" alt="">
+                    <!-- <img class="mobi-tamarind-logo" src="../assets/others/tamarind.png" alt=""> -->
                     <div>Laptop</div>
                     <div>Desktop</div>
                     <div>All In One</div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="second">
                     <div class="left">
-                        TAMARIND
+                        <img class="mobi-tamarind-logo" src="../assets/others/tamarind.png" alt="">
                     </div>
                     <div class="right">
                         <div>Overview</div>
@@ -109,6 +109,7 @@ export default {
     background: white;
     font-family: sans-serif;
     z-index: 100;
+    cursor: pointer;
 }
 .nav-bar > .top {
     background: #000000;
@@ -212,6 +213,7 @@ export default {
 }
 .nav-dropdown > .first {
     font-size: 13px;
+    margin-top: 15px;
 }
 /* media query  */
 @media only screen and (max-width: 1000px) {

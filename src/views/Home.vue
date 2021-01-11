@@ -73,5 +73,8 @@ html{
 .frame-container {
   scroll-snap-align: start;
 }
-
+.text > p {
+    color : #7F7F7F ;
+    font-weight: bold;
+}
 </style>
