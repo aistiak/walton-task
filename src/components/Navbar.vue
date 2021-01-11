@@ -3,7 +3,10 @@
         <div class="nav-bar desktop-view">
             <div class="top">
                 <div class="content">
-                    <div>Logo</div>
+                    <!-- <div>Logo</div> -->
+                    <div>
+                        <img class="top-walton-logo" src="../assets/others/walton-logo-1.png" alt="">
+                    </div>
                     <div>Laptop</div>
                     <div>Desktop</div>
                     <div>All In One</div>
@@ -18,7 +21,8 @@
             <div class="bottom">
                 <div class="content">
                     <div class="left">
-                        TAMARIND
+                        <!-- TAMARIND -->
+                        <img class="tamarind-logo" src="../assets/others/tamarind.png" alt="">
                     </div>
                     <div class="right">
                         <div>Overview</div>
@@ -33,17 +37,22 @@
         <div class="nav-bar-mobile modile-view">
             <div class="nav">
                 <div class="logo">
-                    LOGO
+                    <img class="top-mobi-walton-logo" src="../assets/others/walton-logo-1.png" alt="">
                 </div>
                 <div class="ham">
                     <a href="#" @click="toggleNav">
-                         HAM
+                         <div class="ham">
+                             <div></div>
+                             <div></div>
+                             <div></div>
+                         </div>
                     </a>
                 </div>
             </div>
             <div class="nav-dropdown">
                 <div class="first">
-                   <div>Logo</div>
+                   <!-- <div>Logo</div> -->
+                    <img class="mobi-tamarind-logo" src="../assets/others/tamarind.png" alt="">
                     <div>Laptop</div>
                     <div>Desktop</div>
                     <div>All In One</div>
@@ -212,5 +221,37 @@ export default {
     .nav-bar-mobile {
         display: block;
     }
+}
+
+
+.top-walton-logo{
+    height: 30px;
+    position: relative;
+    right: 8%;
+    top: -18%;
+}
+.tamarind-logo {
+    height: 20px;
+    position: relative;
+    left: 2px;
+}
+.top-mobi-walton-logo{
+    height: 54px;
+    position: relative;
+    top: -49%;
+}
+.mobi-tamarind-logo{
+    height: 19px;
+    margin-top: 10px;
+}
+.ham >div {
+  width: 35px;
+  height: 5px;
+  background-color: #a2a2a2;
+  margin: 6px 0;
+}
+.ham {
+    position: relative;
+    top: -10%;
 }
 </style>

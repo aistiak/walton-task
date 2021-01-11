@@ -109,7 +109,7 @@ export default {
 
 }
 </script>
-<style scoped>
+<style >
 .comp-5 {
     background: black;
     opacity: 100%;
@@ -174,10 +174,15 @@ export default {
         height: 31vh;
     }
 
+    .comp-5 > .text  {
+        position: relative;
+        top: 10%;
+        left: -4%;
+     }
     .comp-5 > .img  {
-        top: 5%;
-        right: 3%;
-        /* left: -10%; */
+        position: relative;
+        top: -3%;
+        right: 2%;
 
     }
 }

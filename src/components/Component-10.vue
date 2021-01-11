@@ -2,7 +2,10 @@
     <div class=" comp-10">
         <div class="comp-10-container">
             <div class="walton-logo">
+                <div>
+                    <img  src="../assets/others/walton-logo-1.png" alt="">
 
+                </div>
             </div>
             <div class="about">
                 <div class="about-info">
@@ -132,5 +135,12 @@
     .other-brands {
         flex-wrap: wrap;
     }
+}
+
+.walton-logo > div >img {
+    background: #222;
+    margin-top: 1%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 </style>

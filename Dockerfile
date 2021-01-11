@@ -1,4 +1,4 @@
-from node
+from vuejs/ci
 WORKDIR /app
 CMD npm install 
 EXPOSE 8080
