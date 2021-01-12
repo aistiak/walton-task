@@ -4,6 +4,8 @@
 http://103.125.252.64:8085/
 
 ## Project setup with npm 
+
+goto project root 
 ```
 npm install
 ```
