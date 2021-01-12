@@ -1,26 +1,26 @@
 # walton
+## live project link 
 
-## Project setup
+http://103.125.252.64:8085/
+
+## Project setup with npm 
 ```
-yarn install
+npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+then goto http://localhost:8080/ 
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+## if you have docker / docker-compose installed 
+goto project root din and enter commmand 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# walton-task" 
-"# walton-task" 
+docker-compose up 
+
+
+then goto http://localhost:8085/ 
+
+
