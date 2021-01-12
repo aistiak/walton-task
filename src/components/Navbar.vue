@@ -27,7 +27,7 @@
                     <div class="right">
                         <div>Overview</div>
                         <div>Tech Spec</div>
-                        <div>Picture Gallyer</div>
+                        <div>Picture Gallery</div>
                         <div class="btn">Buy Now</div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <div class="right">
                         <div>Overview</div>
                         <div>Tech Spec</div>
-                        <div>Picture Gallyer</div>
+                        <div>Picture Gallery</div>
                         <div class="btn">Buy Now</div>
                     </div>
                 </div>
