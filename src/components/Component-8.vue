@@ -5,9 +5,13 @@
                The Latest Connectivity
            </h1>
            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis blanditiis non <br>
+               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis blanditiis non <br>
                beatae officia nesciunt tempore tempora eius repellat sint? Possimus necessitati <br>
-               bus ea reiciendis aliquam animi sit, laborum est recusandae tenetur. <br>
+               bus ea reiciendis aliquam animi sit, laborum est recusandae tenetur. <br> -->
+               The reversal USB-C &trade; (Type-C &trade;) port makes if easier to connect devices . USB 3.1 Gen 1 provides super-fast data <br>
+               transfer speeds-making it possible to transfer a 2 GB movie to a USB drive in under 2 seconds! For maximum <br>
+               convenience and compatibility , the EX38 Pro also features two standard USB 3.1 ports and one HDMI port . <br>
+               
            </p>
         </div>
         <div class="img">

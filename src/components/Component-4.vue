@@ -3,10 +3,14 @@
         <div class="text">
             <h1>Processor</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Tarmind EX10 Pro series is power by 10TH generation Intel®  Processor that can respond &#38; perform at an  <br>
+                amazing speed . Whether you are doing any graphical works or using multiple applications . It tackles them all at an <br>
+                ease . This device can rise above the challenges by giving all the multitasking performance that the user needs for <br>
+                work or play <br> 
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
                 Assumenda quam libero obcaecati, incidunt fugit nihil <br>
                 quisquam ipsam distinctio ea sed doloribus aspernatur odit ab. <br>
-                Aspernatur vel distinctio aut in inventore?
+                Aspernatur vel distinctio aut in inventore? -->
             </p>
         </div>
         <div class="img">

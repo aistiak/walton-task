@@ -3,9 +3,12 @@
         <div class="text">
             <h1>Designed For Mobility</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ab dolores, corrupti, <br>
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ab dolores, corrupti, <br>
                  modi expedita assumenda ut amet similique iste, enim quisquam reiciendis reprehenderit no <br>
-                 strum nemo fugiat porro debitis? Nisi, quod! <br>
+                 strum nemo fugiat porro debitis? Nisi, quod! <br> -->
+                 Tamarind EX38 Pro has a sleak metallic design that will give you premium feel . It is crafted to provide all the <br>
+                 computing essential with metallic finish . The light weight design of Tamarind ensures you to carry it anywhere with <br>
+                 great comfort <br> 
             </p>
         </div>     
         <div class="img">

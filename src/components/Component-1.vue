@@ -3,9 +3,12 @@
         <div class="text" style="">
             <h1>Explore The World </h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nemo <br> 
+                <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nemo <br> 
                 tempore deseruntquia ipsam, quod vel blanditiis facilis iusto nostrum itaque,<br>
-                fugiat dolorem autem sunt labore quisquam quam similique magnam?
+                fugiat dolorem autem sunt labore quisquam quam similique magnam? -->
+                Through the use of USE-C &trade; users get superfast data transfer over SuperSpeed USB 5gbps (USB 3.2) <br>
+                Gen 1). It also includes a total of four USBs ; one USB 2.0 port and HDMI port and two Super Speed <br>
+                USB 5Gbps Type A ports one of which can be used for offline charging. <br> 
             </p>
         </div>
         <div class="img">

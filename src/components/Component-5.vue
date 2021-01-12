@@ -3,10 +3,16 @@
         <!-- <div class="comp-5-container"> -->
             <div class="text">
                 <h1>Experience Cristal Clear Display</h1>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, mollitia <br>
+                <p>
+                    Tamaring EX10 Pro series is equipped with IPS Matte LC display which <br>
+                    gives gloosy and plane view with a vibrant color from all viwing angles .<br>
+                    Enjoy your favorite movies  &#38; videos in the 14 &trde; display wiith <br> 
+                    immense pleasure . IPS Matte LCD display makes Tamarind ultimate substitute <br> 
+                    for work and watching movies . <br>
+                     <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, mollitia <br>
                     repellat suscipit dolorum nihil ut aspernatur illo deleniti sequi <br>
                     perferendis doloribus rem distinctio aliquid, quas quod eveniet pariatur? <br>
-                     Consequuntur, dignissimos. 
+                     Consequuntur, dignissimos.  -->
                 </p>
             </div>
             <div class="img">

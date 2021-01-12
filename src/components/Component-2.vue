@@ -1,7 +1,7 @@
 <template>
     <div class="frame-container comp-2">
         <div class="text ">
-            <h1>Durable 180 Hinge </h1>
+            <h1>Durable 180 &deg; Hinge </h1>
             <p>
                 With its 180 hinge the EX30 Pro can be laid falt on the table to share content with friends and colleagues . its<br>
                 unique , durable hinge design has benn subjects to a gruelling 20,000 cycle in open-and-close tests .
