@@ -19,7 +19,7 @@ npm serve
 then goto http://localhost:8080/ 
 
 ## if you have docker / docker-compose installed 
-goto project root din and enter commmand 
+goto project root dir and enter commmand 
 
 ```
 docker-compose up 
